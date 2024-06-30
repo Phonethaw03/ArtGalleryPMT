@@ -1,0 +1,80 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('../images/view2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+    transition: opacity 0.5s ease;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    backdrop-filter: blur(0px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.back-button button {
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+/* Main Container Styles */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Card Styles */
+.card {
+    margin-top: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    backdrop-filter: blur(0px);
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .form-group label, .form-control, .btn {
+        font-size: 0.9em;
+    }
+}

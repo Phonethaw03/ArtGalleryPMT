@@ -1,0 +1,263 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('../images/view2.jpg') no-repeat center center fixed;
+    color: #333;
+    overflow-x: hidden;
+}
+
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto 0;
+    padding: 40px 20px;
+    text-align: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffd700;
+    display: inline-block;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #555;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: transparent;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #ffd700;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+.nav-links a.active {
+    color: #ffd700;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.contact-section {
+    margin-top: 80px;
+    padding-bottom: 40px;
+    transition: padding-bottom 0.3s ease;
+}
+
+.contact-section:hover {
+    padding-bottom: 60px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.contact-info {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.contact-info h2:hover {
+    color: #555;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-info p:hover {
+    color: #333;
+}
+
+footer {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <div id="transition-overlay"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <h2>Art Gallery</h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../html/home.html">Home</a></li>
+                <li><a href="../html/about.html">About</a></li>
+                <li><a href="../html/gallery.html">Gallery</a></li>
+                <li><a href="../html/profile.html">Profile</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Feel free to get in touch with us using the form below or via email and phone.</p>
+
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1-234-567-890</p>
+                <p>Address: 123 Main Street, City, Country</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

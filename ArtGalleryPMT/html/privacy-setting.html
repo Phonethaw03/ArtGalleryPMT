@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Settings</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/privacy-setting.css">
+</head>
+<body>
+    <header>
+        <div class="back-button">
+            <button onclick="history.back()" class="btn btn-secondary" aria-label="Go back">Back</button>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <section id="privacy-settings">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Privacy Settings</h2>
+                    <form novalidate>
+                        <div class="form-group">
+                            <label for="privacy-option">Privacy Option</label>
+                            <select class="form-control" id="privacy-option">
+                                <option value="public">Public</option>
+                                <option value="private">Private</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notifications">Email Notifications</label>
+                            <select class="form-control" id="notifications">
+                                <option value="enabled">Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Change Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="New Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="2fa">Two-Factor Authentication</label>
+                            <select class="form-control" id="2fa">
+                                <option value="enabled">Enabled</option>
+                                <option value="disabled">Disabled</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="activity-log">Recent Activity Log</label>
+                            <textarea class="form-control" id="activity-log" rows="5" readonly>
+                                - Login from IP 192.168.1.1 on 2024-06-28
+                                - Password changed on 2024-06-25
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-actions">Data Actions</label>
+                            <div>
+                                <button type="button" class="btn btn-info btn-block mb-2">Download My Data</button>
+                                <button type="button" class="btn btn-danger btn-block">Delete My Account</button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 User Profile. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/privacy-setting.js"></script>
+</body>
+</html>
